@@ -53,7 +53,7 @@ Note that this will add some computation time, since the cosine-tapered periodog
 \item{ndecimate}{now ignored}
 }
 \value{
-An on object of class \code{'amt','spec'}, which has a structure similar to a regular \code{'spec'} object, 
+An on object of class \code{'amt','spec'}, which has a structure similar to a regular \code{'spec'} object,
 but with a few additional fields, invisibly.
 }
 \description{
@@ -64,13 +64,13 @@ estimation procedure.
 }
 \details{
 \subsection{Tapering}{
-The parameter \code{ntaper} specifies the number of sine tapers to be used 
-at each frequency: equal tapers at each frequency for a scalar; 
+The parameter \code{ntaper} specifies the number of sine tapers to be used
+at each frequency: equal tapers at each frequency for a scalar;
 otherwise, use \code{ntaper[j]} sine tapers at \code{frequency[j]}.
 }
 
 \subsection{Truncation}{
-The series, with length \eqn{N}, is necessarily truncated so that \eqn{1+N/2} evenly 
+The series, with length \eqn{N}, is necessarily truncated so that \eqn{1+N/2} evenly
 spaced frequencies are returned. This truncation makes the series length ``highly composite",
 which the discrete Fourier transform (DFT) is most efficient.
 The "fftw" vignette (accessed with \code{vignette("fftw",package="psd")}) shows

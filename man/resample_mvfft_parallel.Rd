@@ -9,7 +9,7 @@ resample_mvfft_parallel(
   tapers,
   verbose = TRUE,
   dbl = TRUE,
-  tapcap = 12000L
+  tapcap = 20000L
 )
 }
 \arguments{
@@ -36,7 +36,7 @@ function does.
 \examples{
 fftz <- complex(real=1:8, imaginary = 1:8)
 taps <- 1:4
-try(resample_mvfft(fftz, taps))
+try(resample_mvfft_parallel(fftz, taps))
 
 }
 \seealso{

@@ -4,7 +4,7 @@
 \alias{resample_mvfft}
 \title{Resample an fft using varying numbers of sine tapers}
 \usage{
-resample_mvfft(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 12000L)
+resample_mvfft(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 20000L)
 }
 \arguments{
 \item{fftz}{complex; a matrix representing the dual-length \code{\link{fft}}; see also the \code{dbl} argument}

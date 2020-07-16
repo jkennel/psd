@@ -38,7 +38,7 @@ Note that if \code{f} is given, the values should not already be transformed.}
 A list with the cosine-tapered estimates and the adaptive estimates, invisibly.
 }
 \description{
-Plot the results of \code{\link{psdcore}} against the results of 
+Plot the results of \code{\link{psdcore}} against the results of
 \code{\link{spec.pgram}}
 }
 \examples{
