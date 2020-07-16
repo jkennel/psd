@@ -95,6 +95,36 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// calc_psd
+arma::cx_mat calc_psd(const arma::cx_mat& fftz, const arma::ivec& taper_vec, const arma::field<arma::vec>& para, const int j, const int ne2);
+RcppExport SEXP _psd_calc_psd(SEXP fftzSEXP, SEXP taper_vecSEXP, SEXP paraSEXP, SEXP jSEXP, SEXP ne2SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::cx_mat& >::type fftz(fftzSEXP);
+    Rcpp::traits::input_parameter< const arma::ivec& >::type taper_vec(taper_vecSEXP);
+    Rcpp::traits::input_parameter< const arma::field<arma::vec>& >::type para(paraSEXP);
+    Rcpp::traits::input_parameter< const int >::type j(jSEXP);
+    Rcpp::traits::input_parameter< const int >::type ne2(ne2SEXP);
+    rcpp_result_gen = Rcpp::wrap(calc_psd(fftz, taper_vec, para, j, ne2));
+    return rcpp_result_gen;
+END_RCPP
+}
+// resample_mvfft_parallel
+List resample_mvfft_parallel(const arma::cx_mat& fftz, const arma::ivec& tapers, bool verbose, const bool dbl, const int tapcap);
+RcppExport SEXP _psd_resample_mvfft_parallel(SEXP fftzSEXP, SEXP tapersSEXP, SEXP verboseSEXP, SEXP dblSEXP, SEXP tapcapSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::cx_mat& >::type fftz(fftzSEXP);
+    Rcpp::traits::input_parameter< const arma::ivec& >::type tapers(tapersSEXP);
+    Rcpp::traits::input_parameter< bool >::type verbose(verboseSEXP);
+    Rcpp::traits::input_parameter< const bool >::type dbl(dblSEXP);
+    Rcpp::traits::input_parameter< const int >::type tapcap(tapcapSEXP);
+    rcpp_result_gen = Rcpp::wrap(resample_mvfft_parallel(fftz, tapers, verbose, dbl, tapcap));
+    return rcpp_result_gen;
+END_RCPP
+}
 // det_vector
 arma::cx_vec det_vector(const arma::cx_cube& x);
 RcppExport SEXP _psd_det_vector(SEXP xSEXP) {
@@ -126,6 +156,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_psd_resample_fft_rcpp", (DL_FUNC) &_psd_resample_fft_rcpp, 5},
     {"_psd_riedsid_rcpp", (DL_FUNC) &_psd_riedsid_rcpp, 3},
     {"_psd_resample_mvfft", (DL_FUNC) &_psd_resample_mvfft, 5},
+    {"_psd_calc_psd", (DL_FUNC) &_psd_calc_psd, 5},
+    {"_psd_resample_mvfft_parallel", (DL_FUNC) &_psd_resample_mvfft_parallel, 5},
     {"_psd_det_vector", (DL_FUNC) &_psd_det_vector, 1},
     {"_psd_solve_tf", (DL_FUNC) &_psd_solve_tf, 1},
     {NULL, NULL, 0}

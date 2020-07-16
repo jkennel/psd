@@ -38,7 +38,7 @@ try(modulo_floor(n, 0))
 
 }
 \seealso{
-\code{\link{psd-utilities}}; \code{\link{psdcore}} uses this to 
+\code{\link{psd-utilities}}; \code{\link{psdcore}} uses this to
 truncate series to their nearest even length (i.e., \code{m=2}).
 }
 \author{

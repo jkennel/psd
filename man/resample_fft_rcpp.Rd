@@ -22,7 +22,7 @@ automatically limited by the length of the series.}
 Produce an un-normalized psd based on an fft and a vector of optimal sine tapers
 }
 \details{
-To produce a psd estimate with our adaptive spectrum estimation method, we need only make one 
+To produce a psd estimate with our adaptive spectrum estimation method, we need only make one
 fft calculation initially and then
 apply the weighting factors given by \code{\link{parabolic_weights_rcpp}}, which this
 function does.

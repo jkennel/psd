@@ -51,7 +51,7 @@ These data are for station B084, which is located approximately 8500 km away fro
 the epicenter. Because this distance is large, the seismic waves didn't arrive
 at this station for more than 700 seconds after the origin time.  So there
 is a record of pre-seismic noise included, the timeseries extends 6784 seconds
-prior to the origin time, and 9215 seconds after.  
+prior to the origin time, and 9215 seconds after.
 
 The data are classified with the \code{"epoch"} variable, which separates
 the series into pre-seismic and seismic data; this is defined relative

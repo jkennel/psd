@@ -18,17 +18,17 @@ A dataframe with 2048 observations on the following 4 variables.
 Project MAGNET page: \url{https://www.ngdc.noaa.gov/geomag/proj_mag.shtml}
 }
 \description{
-The Project MAGNET mission 
+The Project MAGNET mission
 provided a wealth of airborne-magnetometer data
-spanning the globe (Coleman, 1992).  
+spanning the globe (Coleman, 1992).
 This dataset represents a single track of horizontal field
 intensities (a very small subset of the full collection!).
 }
 \details{
 \subsection{Raw and Clean Sets}{
-There are non-real data points in raw MAGNET series; these are 
+There are non-real data points in raw MAGNET series; these are
 instrumental artefacts, and can severely affect
-power spectral density (PSD) estimates.  
+power spectral density (PSD) estimates.
 A clean series has been included
 so that a comparison of PSDs may be made.
 
@@ -42,7 +42,7 @@ summary(magnet)
 }
 \references{
 Coleman, R. J. (1992),
-Project Magnet high-level vector survey data reduction. 
+Project Magnet high-level vector survey data reduction.
 In \emph{Types and Characteristics of Data for Geomagnetic Field Modeling},
 \strong{3153}, pp. 215-248.
 }
