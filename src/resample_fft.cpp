@@ -181,7 +181,7 @@ arma::field<arma::vec> parabolic_weights_field(const int ntap) {
 // [[Rcpp::export]]
 List resample_fft_rcpp( ComplexVector fftz, IntegerVector tapers,
                         bool verbose = true, const bool dbl = true,
-                        const int tapcap=20000 ) {
+                        const int tapcap=25000 ) {
 
   //
   // resample and reweight an fft estimates for a given number of tapers
@@ -475,7 +475,7 @@ List resample_mvfft( const arma::cx_mat& fftz,
                      const arma::ivec& tapers,
                      bool verbose = true,
                      const bool dbl = true,
-                     const int tapcap = 20000) {
+                     const int tapcap = 25000) {
 
   //
   // resample and reweight an fft estimates for a given number of tapers
@@ -751,7 +751,7 @@ List resample_mvfft_parallel(const arma::cx_mat& fftz,
                            const arma::ivec& tapers,
                            bool verbose = true,
                            const bool dbl = true,
-                           const int tapcap = 20000) {
+                           const int tapcap = 25000) {
 
   //
   // resample and reweight an fft estimates for a given number of tapers

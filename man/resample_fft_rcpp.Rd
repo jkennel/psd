@@ -4,7 +4,7 @@
 \alias{resample_fft_rcpp}
 \title{Resample an fft using varying numbers of sine tapers}
 \usage{
-resample_fft_rcpp(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 20000L)
+resample_fft_rcpp(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 25000L)
 }
 \arguments{
 \item{fftz}{complex; a vector representing the dual-length \code{\link{fft}}; see also the \code{dbl} argument}

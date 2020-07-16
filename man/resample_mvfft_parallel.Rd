@@ -9,7 +9,7 @@ resample_mvfft_parallel(
   tapers,
   verbose = TRUE,
   dbl = TRUE,
-  tapcap = 20000L
+  tapcap = 25000L
 )
 }
 \arguments{
