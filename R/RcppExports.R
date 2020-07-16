@@ -90,7 +90,7 @@ parabolic_weights_field <- function(ntap) {
 #' try(resample_fft_rcpp(fftz, taps))
 #'
 #' @export
-resample_fft_rcpp <- function(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 5000L) {
+resample_fft_rcpp <- function(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 12000L) {
     .Call('_psd_resample_fft_rcpp', PACKAGE = 'psd', fftz, tapers, verbose, dbl, tapcap)
 }
 
@@ -137,7 +137,7 @@ riedsid_rcpp <- function(PSD, ntaper, riedsid_column = 0L) {
 #' try(resample_mvfft(fftz, taps))
 #'
 #' @export
-resample_mvfft <- function(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 5000L) {
+resample_mvfft <- function(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 12000L) {
     .Call('_psd_resample_mvfft', PACKAGE = 'psd', fftz, tapers, verbose, dbl, tapcap)
 }
 
@@ -171,7 +171,7 @@ calc_psd <- function(fftz, taper_vec, para, j, ne2) {
 #' try(resample_mvfft_parallel(fftz, taps))
 #'
 #' @export
-resample_mvfft_parallel <- function(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 5000L) {
+resample_mvfft_parallel <- function(fftz, tapers, verbose = TRUE, dbl = TRUE, tapcap = 12000L) {
     .Call('_psd_resample_mvfft_parallel', PACKAGE = 'psd', fftz, tapers, verbose, dbl, tapcap)
 }
 
